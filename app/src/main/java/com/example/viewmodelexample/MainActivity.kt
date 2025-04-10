@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import com.example.viewmodelexample.ui.CounterScreen
 import com.example.viewmodelexample.ui.theme.ViewModelExampleTheme
 
 class MainActivity : ComponentActivity() {
@@ -35,36 +36,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MyCounterApp()
+                    CounterScreen()
                 }
             }
         }
     }
-}
-
-@Composable
-fun MyCounterApp() {
-    var count by remember{ mutableStateOf(0) }
-    fun increment(){
-        count += 1
-    }
-    fun decrement(){
-        count--
-    }
-    //user interface
-    Column( modifier=Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally ) {
-        Text("Counter: $count",
-            fontSize   = 24.sp,
-            fontWeight = FontWeight.Bold)
-        Button(onClick = { increment() }) {
-            Text(text = "Increment")
-        }
-        Button(onClick = { decrement() }) {
-            Text(text = "Decrement")
-        }
-    }
-
-
 }
