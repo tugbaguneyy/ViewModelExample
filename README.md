@@ -35,4 +35,4 @@ Then open the project in Android Studio and run the app.
 👉 Read it on Medium : https://medium.com/@hotreloadiaries
 
 
-<img src="ViewModelExample.jpg" width="353" height="800"/>
+<img src="https://github.com/tugbaguneyy/ViewModelExample/blob/viewmodel/ViewModelExample.jpg" width="353" height="800"/>
